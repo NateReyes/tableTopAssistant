@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_character"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="466dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:text="Character Creation"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginBottom="424dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Character Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ExpandableListView
+        android:layout_width="195dp"
+        android:layout_height="418dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="141dp"
+        />
+</android.support.constraint.ConstraintLayout>
