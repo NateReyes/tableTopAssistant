@@ -2,6 +2,9 @@ package mycompany.tabletopassistant.models;
 
 import java.util.ArrayList;
 
+import mycompany.tabletopassistant.models.inventory.Inventory;
+import mycompany.tabletopassistant.models.inventory.Item;
+
 /**
  * Created by Nate on 6/3/2018.
  */
@@ -23,6 +26,10 @@ public class Character {
     private int speed;
     private ArrayList<String> statNames;
     private ArrayList<Integer> statValues;
+    private ArrayList<String> savingThrows;
+    private int proieciencyBonus;
+    private ArrayList<Skill> skills;
+    private Inventory inventory;
 
     public String getName() {
         return name;
@@ -151,6 +158,23 @@ public class Character {
     public void setStatValues(ArrayList<Integer> statValues) {
         this.statValues = statValues;
     }
+
+    public ArrayList<String> getSavingThrows() {
+        return savingThrows;
+    }
+
+    public void setSavingThrows(ArrayList<String> savingThrows) {
+        this.savingThrows = savingThrows;
+    }
+
+    public int getProieciencyBonus() {
+        return proieciencyBonus;
+    }
+
+    public void setProieciencyBonus(int proieciencyBonus) {
+        this.proieciencyBonus = proieciencyBonus;
+    }
+
     public int findStatValue(String stat){
         int index = statNames.indexOf(stat);
         return index;

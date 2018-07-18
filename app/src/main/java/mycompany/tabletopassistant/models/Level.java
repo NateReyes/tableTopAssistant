@@ -97,7 +97,12 @@ public class Level {
         String stat=parseStat(spellsPreparedFormualTemp);
         int count=0;
         while(spellsPreparedFormual.length()>1){
-            count +=c.findStatValue(stat);
+            if(stat.equals("proficiencyBonus")){
+                count+=this.proficiencyBonus;
+            }
+            else {
+                count += c.findStatValue(stat);
+            }
             spellsPreparedFormual  = spellsPreparedFormual.substring(stat.length());
         }
         this.spellsKnow = count;

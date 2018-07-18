@@ -35,8 +35,8 @@ public class LevelTree {
     }
 
     public void levelUp(ArrayList<Trait> traits){
+        currentLvl ++;
         ArrayList<Trait> features = levels.get(currentLvl).getFeatures();
-        currentLvl += 1;
         int size = features.size();
         int index = 0;
         while(index<size){
@@ -44,5 +44,16 @@ public class LevelTree {
             index ++;
         }
 
+    }
+
+    public void levelDown(ArrayList<Trait> traits){
+        ArrayList<Trait> features = levels.get(currentLvl).getFeatures();
+        currentLvl--;
+        int size = features.size();
+        int index = 0;
+        while (index<size){
+            traits.remove(features.get(index));
+            index++;
+        }
     }
 }

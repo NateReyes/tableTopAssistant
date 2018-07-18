@@ -17,7 +17,6 @@ public class RPClass {
     private String allSkills;
     private int skillsToChoose;
     private String mySkills;
-    private String equipment;
 
 
 }
